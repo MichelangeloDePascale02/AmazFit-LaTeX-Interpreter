@@ -29,10 +29,11 @@ AppSettingsPage({
 
         // Area di Testo
         TextInput({
-          label: '',
+          label: 'Tap here to write or edit formulas',
           settingsKey: 'formulas_list_string',
           multiline: true,
           rows: 15,
+          style: { minHeight: '50px', width: '100%', display: 'block' },
           placeholder: 'Type your math notes here...',
           value: props.settingsStorage.getItem('formulas_list_string') || '# Fundamental Theorem\n\\int_a^b f(x)dx = F(b) - F(a)\nF\'(x) = f(x)\nQ.E.D.\n\n# Energy & Momentum\nE = \\gamma m_0 c^2\np = \\gamma m_0 v',
           onChange: (value) => {
